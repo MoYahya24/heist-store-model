@@ -1,8 +1,5 @@
 package io.heist.store.model.core.balances
 
-import org.neo4j.ogm.annotation.NodeEntity
-
-@NodeEntity
 enum class BalanceType(val value: String) {
     OB_CLOSINGAVAILABLE("ClosingAvailable"), OB_CLOSINGBOOKED("ClosingBooked"), OB_CLOSINGCLEARED("ClosingCleared"), OB_EXPECTED(
         "Expected"

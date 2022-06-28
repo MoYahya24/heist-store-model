@@ -1,9 +1,5 @@
 package io.heist.store.model.core.debits
 
-import org.neo4j.ogm.annotation.NodeEntity
-
-
-@NodeEntity
 enum class DirectDebitStatus(val value: String) {
     ACTIVE("Active"), INACTIVE("Inactive");
 

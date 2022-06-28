@@ -1,8 +1,5 @@
 package io.heist.store.model.core.transactions
 
-import org.neo4j.ogm.annotation.NodeEntity
-
-@NodeEntity
 enum class Auth(val value: String) {
     CONSUMERDEVICE("ConsumerDevice"), CONTACTLESS("Contactless"), NONE("None"), PIN("PIN");
 

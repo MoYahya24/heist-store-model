@@ -1,8 +1,5 @@
 package io.heist.store.model.core.consents
 
-import org.neo4j.ogm.annotation.NodeEntity
-
-@NodeEntity
 enum class Permission(val value: String) {
     READACCOUNTSBASIC("ReadAccountsBasic"), READACCOUNTSDETAIL("ReadAccountsDetail"), READBALANCES("ReadBalances"), READBENEFICIARIESBASIC(
         "ReadBeneficiariesBasic"

@@ -1,8 +1,5 @@
 package io.heist.store.model.core.transactions
 
-import org.neo4j.ogm.annotation.NodeEntity
-
-@NodeEntity
 enum class TransactionStatus(val value: String) {
     BOOKED("Booked"), PENDING("Pending");
 

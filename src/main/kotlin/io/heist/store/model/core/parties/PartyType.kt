@@ -1,8 +1,5 @@
 package io.heist.store.model.core.parties
 
-import org.neo4j.ogm.annotation.NodeEntity
-
-@NodeEntity
 enum class PartyType(val value: String) {
     DELEGATE("Delegate"), JOINT("Joint"), SOLE("Sole");
 

@@ -1,9 +1,5 @@
 package io.heist.store.model.core.amounts
 
-import org.neo4j.ogm.annotation.NodeEntity
-
-
-@NodeEntity
 enum class Sign(val value: String) {
     CREDIT("Credit"), DEBIT("Debit");
 

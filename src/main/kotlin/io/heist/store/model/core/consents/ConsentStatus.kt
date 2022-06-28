@@ -1,8 +1,5 @@
 package io.heist.store.model.core.consents
 
-import org.neo4j.ogm.annotation.NodeEntity
-
-@NodeEntity
 enum class ConsentStatus(val value: String) {
     AUTHORISED("Authorised"), AWAITINGAUTHORISATION("AwaitingAuthorisation"), REJECTED("Rejected"), REVOKED("Revoked");
 

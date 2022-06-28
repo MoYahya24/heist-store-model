@@ -16,52 +16,32 @@
 package io.heist.store.model.core.debits
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties
-import com.fasterxml.jackson.core.JsonProcessingException
-import com.fasterxml.jackson.databind.ObjectMapper
 import io.heist.store.model.core.accounts.Account
 import io.heist.store.model.core.amounts.Amount
 import org.neo4j.ogm.annotation.*
 import org.neo4j.ogm.id.UuidStrategy
-import java.math.BigDecimal
 import java.time.OffsetDateTime
-import java.util.*
 
-/**
- * Account to or from which a cash entry is made.
- */
-@JsonIgnoreProperties(ignoreUnknown = true)
-@NodeEntity
 data class Debit (
 
-    @Id
-    @GeneratedValue(strategy = UuidStrategy::class)
     val id: String? = null,
 
-    @Index
     val ref: String? = null,
 
-    @Property
     val mandateId: String? = null,
 
-    @Index
     val status: String? = null,
 
-    @Index
     val name: String? = null,
 
-    @Property
     val prev: OffsetDateTime? = null,
 
-    @Property
     val frequency: String? = null,
 
-    @Relationship("IS_ACCOUNT_OF")
     val account: Account? = null,
 
-    @Relationship("IS_AMOUNT_OF")
     val amount: Amount? = null
 
 ) {
-    @Property
     val debitStatus = DirectDebitStatus.fromValue(status!!)
 }

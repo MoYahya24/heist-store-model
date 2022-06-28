@@ -1,8 +1,5 @@
 package io.heist.store.model.core.accounts
 
-import org.neo4j.ogm.annotation.NodeEntity
-
-@NodeEntity
 enum class AccountType(val value: String) {
     BUSINESS("Business"), PERSONAL("Personal");
 
